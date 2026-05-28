@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediconnect | Book Appointment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <p class="emergency-line">Emergency line: available for your local area</p>
+      <h1>Mediconnect</h1>
+      <p>Community health access and appointment platform</p>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="appointment.html" class="active">Book Appointment</a>
+  </nav>
+
+  <main>
+    <section class="form-layout">
+      <div class="form-visual">
+        <img src="assets/appointment-medical.svg" alt="Appointment illustration" class="form-image">
+        <div class="form-note">
+          <p class="tagline">Patient appointment request</p>
+          <h2>Book an Appointment</h2>
+          <p>
+            Fill in the form below to request care from a nearby health center
+            or hospital. The booking flow is designed for community access and
+            quick guidance to the right facility.
+          </p>
+          <p>
+            Start with your district, then choose your sector, cell or village,
+            and the health area nearest to you.
+          </p>
+          <div class="small-panels">
+            <div class="small-panel">
+              <h3>Before You Visit</h3>
+              <p>Check the district, sector, date, and reason first.</p>
+            </div>
+            <div class="small-panel">
+              <h3>What To Bring</h3>
+              <p>National ID, patient card if available, and any records.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="booking-form">
+        <div class="form-row">
+          <div>
+            <label for="district">District</label>
+            <input id="district" name="district" type="text" placeholder="Enter your district">
+          </div>
+
+          <div>
+            <label for="sector">Sector</label>
+            <input id="sector" name="sector" type="text" placeholder="Enter your sector">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="cell">Cell / Village</label>
+            <input id="cell" name="cell" type="text" placeholder="Enter your cell or village">
+          </div>
+
+          <div>
+            <label for="area">Health Center Near You</label>
+            <input id="area" name="area" type="text" placeholder="Enter your health center near you">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="fullname">Full Name</label>
+            <input id="fullname" name="fullname" type="text" placeholder="Enter your full name">
+          </div>
+
+          <div>
+            <label for="age">Age</label>
+            <input id="age" name="age" type="number" min="0" step="1" placeholder="Enter your age">
+          </div>
+        </div>
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel" placeholder="Enter your phone number">
+
+        <div class="form-row">
+          <div>
+            <label for="date">Preferred Date</label>
+            <input id="date" name="date" type="date">
+          </div>
+
+          <div>
+            <label for="time">Preferred Time</label>
+            <input id="time" name="time" type="time">
+          </div>
+        </div>
+
+        <label for="reason">Reason for Visit</label>
+        <textarea id="reason" name="reason" rows="5" placeholder="Write your reason here"></textarea>
+
+        <label for="notes">Extra Notes</label>
+        <textarea id="notes" name="notes" rows="3" placeholder="Any extra information for the nurse or doctor"></textarea>
+
+        <button type="submit">Submit Appointment Request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mediconnect Community Health Access</p>
+  </footer>
+</body>
+</html>
