@@ -49,65 +49,66 @@
         </div>
       </div>
 
-      <form class="booking-form">
+      <form id="appointmentForm" class="booking-form">
         <div class="form-row">
           <div>
             <label for="district">District</label>
-            <input id="district" name="district" type="text" placeholder="Enter your district">
+            <input id="district" name="district" type="text" placeholder="Enter your district" required>
           </div>
 
           <div>
             <label for="sector">Sector</label>
-            <input id="sector" name="sector" type="text" placeholder="Enter your sector">
+            <input id="sector" name="sector" type="text" placeholder="Enter your sector" required>
           </div>
         </div>
 
         <div class="form-row">
           <div>
             <label for="cell">Cell / Village</label>
-            <input id="cell" name="cell" type="text" placeholder="Enter your cell or village">
+            <input id="cell" name="cell" type="text" placeholder="Enter your cell or village" required>
           </div>
 
           <div>
             <label for="area">Health Center Near You</label>
-            <input id="area" name="area" type="text" placeholder="Enter your health center near you">
+            <input id="area" name="area" type="text" placeholder="Enter your health center near you" required>
           </div>
         </div>
 
         <div class="form-row">
           <div>
             <label for="fullname">Full Name</label>
-            <input id="fullname" name="fullname" type="text" placeholder="Enter your full name">
+            <input id="fullname" name="fullname" type="text" placeholder="Enter your full name" required>
           </div>
 
           <div>
             <label for="age">Age</label>
-            <input id="age" name="age" type="number" min="0" step="1" placeholder="Enter your age">
+            <input id="age" name="age" type="number" min="1" max="120" step="1" placeholder="Enter your age" required>
           </div>
         </div>
 
         <label for="phone">Phone Number</label>
-        <input id="phone" name="phone" type="tel" placeholder="Enter your phone number">
+        <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required>
 
         <div class="form-row">
           <div>
             <label for="date">Preferred Date</label>
-            <input id="date" name="date" type="date">
+            <input id="date" name="date" type="date" required>
           </div>
 
           <div>
             <label for="time">Preferred Time</label>
-            <input id="time" name="time" type="time">
+            <input id="time" name="time" type="time" required>
           </div>
         </div>
 
         <label for="reason">Reason for Visit</label>
-        <textarea id="reason" name="reason" rows="5" placeholder="Write your reason here"></textarea>
+        <textarea id="reason" name="reason" rows="5" placeholder="Write your reason here" required></textarea>
 
         <label for="notes">Extra Notes</label>
         <textarea id="notes" name="notes" rows="3" placeholder="Any extra information for the nurse or doctor"></textarea>
 
         <button type="submit">Submit Appointment Request</button>
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
       </form>
     </section>
   </main>
@@ -115,5 +116,6 @@
   <footer>
     <p>Mediconnect Community Health Access</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

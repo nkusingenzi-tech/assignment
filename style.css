@@ -482,6 +482,11 @@ tr:nth-child(even) {
   box-shadow: var(--shadow);
 }
 
+.form-message {
+  margin: 14px 0 0;
+  font-weight: bold;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
