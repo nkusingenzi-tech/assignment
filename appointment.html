@@ -3,119 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mediconnect | Book Appointment</title>
+  <meta name="description" content="Request a community healthcare appointment with MediConnect.">
+  <title>MediConnect | Book an appointment</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="header-top">
-      <p class="emergency-line">Emergency line: available for your local area</p>
-      <h1>Mediconnect</h1>
-      <p>Community health access and appointment platform</p>
-    </div>
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="MediConnect home">
+        <span class="brand-mark" aria-hidden="true"><img src="assets/icons/medical.svg" alt="" class="brand-icon"></span>
+        <span>MediConnect</span>
+      </a>
+      <div class="nav-actions">
+        <a class="nav-link" href="index.html"><img src="assets/icons/home.svg" alt="" class="nav-icon">Home</a>
+        <a class="nav-link active" href="appointment.html" aria-current="page"><img src="assets/icons/calendar.svg" alt="" class="nav-icon">Book an appointment</a>
+      </div>
+    </nav>
   </header>
 
-  <nav class="site-nav">
-    <a href="index.html">Home</a>
-    <a href="appointment.html" class="active">Book Appointment</a>
-  </nav>
-
   <main>
-    <section class="form-layout">
-      <div class="form-visual">
-        <img src="assets/appointment-medical.svg" alt="Appointment illustration" class="form-image">
-        <div class="form-note">
-          <p class="tagline">Patient appointment request</p>
-          <h2>Book an Appointment</h2>
-          <p>
-            Fill in the form below to request care from a nearby health center
-            or hospital. The booking flow is designed for community access and
-            quick guidance to the right facility.
-          </p>
-          <p>
-            Start with your district, then choose your sector, cell or village,
-            and the health area nearest to you.
-          </p>
-          <div class="small-panels">
-            <div class="small-panel">
-              <h3>Before You Visit</h3>
-              <p>Check the district, sector, date, and reason first.</p>
-            </div>
-            <div class="small-panel">
-              <h3>What To Bring</h3>
-              <p>National ID, patient card if available, and any records.</p>
-            </div>
-          </div>
-        </div>
+    <section class="page-intro container">
+      <p class="eyebrow"><img src="assets/icons/calendar.svg" alt="" class="eyebrow-icon">Appointment request</p>
+      <h1>Book an appointment</h1>
+      <p>Share a few details and a nearby clinic can use your contact information to confirm your visit.</p>
+    </section>
+
+    <section class="booking-section container" aria-labelledby="booking-title">
+      <div class="section-heading">
+        <h2 id="booking-title">Tell us what you need</h2>
+        <p>Fields marked with <span aria-hidden="true">*</span> are required.</p>
       </div>
 
-      <form id="appointmentForm" class="booking-form">
-        <div class="form-row">
-          <div>
-            <label for="district">District</label>
-            <input id="district" name="district" type="text" placeholder="Enter your district" required>
+      <form id="appointmentForm" class="booking-form" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="fullName">Full name <span aria-hidden="true">*</span></label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="e.g. Amina Mukamana" required>
+            <span class="error-text"></span>
           </div>
 
-          <div>
-            <label for="sector">Sector</label>
-            <input id="sector" name="sector" type="text" placeholder="Enter your sector" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div>
-            <label for="cell">Cell / Village</label>
-            <input id="cell" name="cell" type="text" placeholder="Enter your cell or village" required>
+          <div class="field">
+            <label for="phone">Phone number <span aria-hidden="true">*</span></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. 078 000 0000" required>
+            <span class="error-text"></span>
           </div>
 
-          <div>
-            <label for="area">Health Center Near You</label>
-            <input id="area" name="area" type="text" placeholder="Enter your health center near you" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div>
-            <label for="fullname">Full Name</label>
-            <input id="fullname" name="fullname" type="text" placeholder="Enter your full name" required>
+          <div class="field">
+            <label for="facility">Clinic or hospital <span aria-hidden="true">*</span></label>
+            <input id="facility" name="facility" type="text" placeholder="Enter a nearby facility" required>
+            <span class="error-text"></span>
           </div>
 
-          <div>
-            <label for="age">Age</label>
-            <input id="age" name="age" type="number" min="1" max="120" step="1" placeholder="Enter your age" required>
+          <div class="field">
+            <label for="service">Type of care <span aria-hidden="true">*</span></label>
+            <select id="service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>General consultation</option>
+              <option>Child health</option>
+              <option>Maternal care</option>
+              <option>Vaccination</option>
+              <option>Follow-up visit</option>
+            </select>
+            <span class="error-text"></span>
           </div>
-        </div>
 
-        <label for="phone">Phone Number</label>
-        <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required>
-
-        <div class="form-row">
-          <div>
-            <label for="date">Preferred Date</label>
+          <div class="field">
+            <label for="date">Preferred date <span aria-hidden="true">*</span></label>
             <input id="date" name="date" type="date" required>
+            <span class="error-text"></span>
           </div>
 
-          <div>
-            <label for="time">Preferred Time</label>
+          <div class="field">
+            <label for="time">Preferred time <span aria-hidden="true">*</span></label>
             <input id="time" name="time" type="time" required>
+            <span class="error-text"></span>
           </div>
         </div>
 
-        <label for="reason">Reason for Visit</label>
-        <textarea id="reason" name="reason" rows="5" placeholder="Write your reason here" required></textarea>
+        <div class="field">
+          <label for="reason">What do you need help with? <span aria-hidden="true">*</span></label>
+          <textarea id="reason" name="reason" rows="4" placeholder="Briefly describe the reason for your visit" required></textarea>
+          <span class="error-text"></span>
+        </div>
 
-        <label for="notes">Extra Notes</label>
-        <textarea id="notes" name="notes" rows="3" placeholder="Any extra information for the nurse or doctor"></textarea>
-
-        <button type="submit">Submit Appointment Request</button>
-        <p id="formMessage" class="form-message" aria-live="polite"></p>
+        <div class="form-footer">
+          <button class="button button-primary" type="submit">Send appointment request <img src="assets/icons/arrow.svg" alt="" class="button-icon"></button>
+          <p class="demo-note">Demo only — this form does not send real medical bookings.</p>
+        </div>
+        <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
       </form>
+    </section>
+
+    <section class="help-section" aria-labelledby="help-title">
+      <div class="container help-content">
+        <div>
+          <p class="eyebrow"><img src="assets/icons/warning.svg" alt="" class="eyebrow-icon">Before you visit</p>
+          <h2 id="help-title">Bring your ID or patient card.</h2>
+          <p>For urgent or life-threatening symptoms, skip the form and go to the nearest emergency department.</p>
+        </div>
+        <a class="button button-light" href="index.html">Back to home <img src="assets/icons/arrow.svg" alt="" class="button-icon"></a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>Mediconnect Community Health Access</p>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p><strong>MediConnect</strong> — simple access to community care.</p>
+      <p>Built as a front-end demo.</p>
+    </div>
   </footer>
+
+  <div id="successModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-success-icon">
+          <img src="assets/icons/check.svg" alt="Success" class="success-icon-svg">
+        </div>
+        <h2 id="modalTitle">Request Received!</h2>
+      </div>
+      <div class="modal-body">
+        <p>Thank you, <span id="summaryName" class="summary-highlight"></span>. Your appointment request has been recorded.</p>
+        <div class="appointment-summary">
+          <div class="summary-item">
+            <span class="summary-label">Clinic/Hospital</span>
+            <span class="summary-value" id="summaryFacility"></span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Type of Care</span>
+            <span class="summary-value" id="summaryService"></span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Date &amp; Time</span>
+            <span class="summary-value" id="summaryDateTime"></span>
+          </div>
+        </div>
+        <p class="modal-note">The clinic can use your phone number <strong id="summaryPhone"></strong> to contact and confirm your visit.</p>
+      </div>
+      <div class="modal-footer">
+        <button id="closeModalBtn" class="button button-primary" type="button">Got it</button>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

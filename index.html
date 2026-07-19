@@ -3,260 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mediconnect | Community Health Access</title>
+  <meta name="description" content="A simple community healthcare appointment demo.">
+  <title>MediConnect | Simple healthcare access</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="header-top">
-      <p class="emergency-line">Emergency line: available for your local area</p>
-      <h1>Mediconnect</h1>
-      <p>Community health access and appointment platform</p>
-    </div>
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="MediConnect home">
+        <span class="brand-mark" aria-hidden="true"><img src="assets/icons/medical.svg" alt="" class="brand-icon"></span>
+        <span>MediConnect</span>
+      </a>
+      <div class="nav-actions">
+        <a class="nav-link active" href="index.html"><img src="assets/icons/home.svg" alt="" class="nav-icon">Home</a>
+        <a class="nav-link" href="appointment.html"><img src="assets/icons/calendar.svg" alt="" class="nav-icon">Book an appointment</a>
+      </div>
+    </nav>
   </header>
 
-  <nav class="site-nav">
-    <a href="index.html" class="active">Home</a>
-    <a href="appointment.html">Book Appointment</a>
-  </nav>
-
   <main>
-    <section class="hero">
-      <div class="hero-text">
-        <p class="tagline">Digital healthcare for local communities</p>
-        <h2>Connecting patients to nearby health centers and hospitals</h2>
-        <p>
-          MedConnect is a modern digital healthcare platform designed to bring
-          medical services closer to people anytime and anywhere. It connects
-          patients, nurses, health centers, and hospitals in one simple
-          experience.
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">Community healthcare made simple</p>
+        <h1>Find care.<br><span>Book in minutes.</span></h1>
+        <p class="hero-text">
+          Request an appointment at a nearby clinic or hospital using one short form.
+          No account is needed for this demo.
         </p>
-        <p>
-          Users can start by choosing their district, then their sector, cell,
-          and health area before seeing the nearby facility that serves them.
-        </p>
-        <div class="hero-actions">
-          <a href="appointment.html" class="button">Book an Appointment</a>
-          <a href="#contact" class="secondary-button">Contact Support</a>
-        </div>
+        <a class="button button-primary" href="appointment.html">Start booking <img src="assets/icons/arrow.svg" alt="" class="button-icon"></a>
       </div>
 
-      <div class="hero-box">
-        <img src="assets/hero-medical.svg" alt="Medical care illustration" class="hero-image">
-        <h3>MedConnect Services</h3>
-        <ul>
-          <li>Book patient appointments</li>
-          <li>Find nearby health facilities</li>
-          <li>Start from district and move down to health area</li>
-          <li>Reduce long waiting times</li>
+      <aside class="hero-card" aria-label="MediConnect benefits">
+        <div class="card-icon" aria-hidden="true"><img src="assets/icons/medical.svg" alt="" class="card-icon-image"></div>
+        <h2>Care that starts with you</h2>
+        <ul class="benefits">
+          <li><img src="assets/icons/check.svg" alt="" class="benefit-icon">Simple appointment requests</li>
+          <li><img src="assets/icons/check.svg" alt="" class="benefit-icon">Clear information for your visit</li>
+          <li><img src="assets/icons/check.svg" alt="" class="benefit-icon">Works on any phone or computer</li>
         </ul>
-      </div>
+      </aside>
     </section>
 
-    <section class="cards-section">
-      <h2>Services People Need in Real Life</h2>
-      <div class="card-grid">
-        <div class="info-card">
-          <h3>Emergency Care</h3>
-          <p>Quick contact details and guidance for urgent medical help.</p>
-        </div>
-        <div class="info-card">
-          <h3>District to Health Area</h3>
-          <p>Patients can search by district, then sector, then the nearest health area.</p>
-        </div>
-        <div class="info-card">
-          <h3>Hospital Referrals</h3>
-          <p>Clear information when a patient needs specialist treatment.</p>
-        </div>
-        <div class="info-card">
-          <h3>Appointment Booking</h3>
-          <p>A simple form for requesting a visit to a health center or hospital.</p>
-        </div>
-        <div class="info-card">
-          <h3>Nursing and Clinical Support</h3>
-          <p>Nurses and clinical staff are shown in one place instead of random names.</p>
-        </div>
-        <div class="info-card">
-          <h3>Patient Guidance</h3>
-          <p>People can understand where to go before they travel for care.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <h2>About Mediconnect</h2>
-      <p>
-        Mediconnect is built to help communities find the right health service
-        faster. It gives people a simple way to start from their district,
-        move to the sector, and reach the nearest care point without confusion.
-      </p>
-      <p>
-        The platform is meant for everyday people who need clear guidance,
-        simple booking steps, and quick access to nearby support.
-      </p>
-    </section>
-
-    <section class="content-section">
-      <h2>How It Works</h2>
-      <div class="steps-grid">
-        <div class="step-card">
-          <span>1</span>
-          <h3>Choose District</h3>
-          <p>Start with the district where you live or where the patient is located.</p>
-        </div>
-        <div class="step-card">
-          <span>2</span>
-          <h3>Choose Sector</h3>
-          <p>Select the sector to narrow the search to a more local area.</p>
-        </div>
-        <div class="step-card">
-          <span>3</span>
-          <h3>Enter Health Area</h3>
-          <p>Type the health center or health area nearest to the patient.</p>
-        </div>
-        <div class="step-card">
-          <span>4</span>
-          <h3>Submit Request</h3>
-          <p>Fill the rest of the form and send the appointment request.</p>
+    <section class="steps-section" aria-labelledby="steps-title">
+      <div class="container">
+        <p class="eyebrow">How it works</p>
+        <h2 id="steps-title">Three easy steps</h2>
+        <div class="steps">
+          <article class="step">
+            <span class="step-number">1</span>
+            <div>
+              <h3>Tell us about you</h3>
+              <p>Enter your name and a phone number where the clinic can reach you.</p>
+            </div>
+          </article>
+          <article class="step">
+            <span class="step-number">2</span>
+            <div>
+              <h3>Choose your visit</h3>
+              <p>Select a facility, date, and the type of care you need.</p>
+            </div>
+          </article>
+          <article class="step">
+            <span class="step-number">3</span>
+            <div>
+              <h3>Send your request</h3>
+              <p>The clinic can use your contact details to confirm the visit.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="content-section">
-      <h2>Find Care</h2>
-      <div class="care-grid">
-        <div class="care-card">
-          <h3>Primary Care</h3>
-          <p>Use for common illnesses, checkups, and basic treatment.</p>
+    <section class="cta-section container" aria-labelledby="cta-title">
+      <div class="cta-card">
+        <div>
+          <p class="eyebrow">Ready to get started?</p>
+          <h2 id="cta-title">Request a visit when it works for you.</h2>
+          <p>Fill in the short appointment form and share your preferred clinic, date, and time.</p>
         </div>
-        <div class="care-card">
-          <h3>Maternal Care</h3>
-          <p>For pregnancy visits, prenatal checks, and delivery support.</p>
-        </div>
-        <div class="care-card">
-          <h3>Child Health</h3>
-          <p>For vaccination, growth monitoring, and child illnesses.</p>
-        </div>
-        <div class="care-card">
-          <h3>Referral Care</h3>
-          <p>For cases that need specialist attention or hospital treatment.</p>
-        </div>
+        <a class="button button-primary" href="appointment.html">Open appointment form <img src="assets/icons/arrow.svg" alt="" class="button-icon"></a>
       </div>
     </section>
 
-    <section class="content-section">
-      <h2>Quick Help</h2>
-      <div class="help-grid">
-        <div class="help-card accent">
-          <p class="help-label">Emergency</p>
-          <h3>Get urgent help fast</h3>
-          <p>If someone has severe bleeding, trouble breathing, chest pain, or loss of consciousness, go to the nearest emergency point immediately.</p>
+    <section class="help-section" aria-labelledby="help-title">
+      <div class="container help-content">
+        <div>
+          <p class="eyebrow"><img src="assets/icons/warning.svg" alt="" class="eyebrow-icon">Need urgent help?</p>
+          <h2 id="help-title">Call your local emergency service.</h2>
+          <p>MediConnect is for appointment requests. For serious or life-threatening symptoms, go to the nearest emergency department now.</p>
         </div>
-        <div class="help-card">
-          <p class="help-label">Before Visit</p>
-          <h3>Bring the basics</h3>
-          <p>Carry your ID, any health card, previous prescription, and a phone number for contact.</p>
-        </div>
-        <div class="help-card">
-          <p class="help-label">Accessibility</p>
-          <h3>Support for everyone</h3>
-          <p>Use the site on phone or computer, with clear labels, large buttons, and simple forms.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <h2>Health Tips</h2>
-      <div class="tip-grid">
-        <div class="tip-card">
-          <h3>Fever and flu</h3>
-          <p>Rest, drink water, and visit a health center if the fever stays high or gets worse.</p>
-        </div>
-        <div class="tip-card">
-          <h3>Child care</h3>
-          <p>Keep vaccinations up to date and seek care quickly if a child is weak, unable to eat, or has trouble breathing.</p>
-        </div>
-        <div class="tip-card">
-          <h3>Pregnancy care</h3>
-          <p>Early antenatal visits help reduce risks and make it easier to detect problems early.</p>
-        </div>
-        <div class="tip-card">
-          <h3>Clean water</h3>
-          <p>Wash hands, drink safe water, and keep food covered to reduce common illness.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <h2>Service Categories</h2>
-      <div class="category-row">
-        <div class="category-pill">Outpatient</div>
-        <div class="category-pill">Maternity</div>
-        <div class="category-pill">Child Health</div>
-        <div class="category-pill">Vaccination</div>
-        <div class="category-pill">Dental</div>
-        <div class="category-pill">Laboratory</div>
-        <div class="category-pill">Pharmacy</div>
-        <div class="category-pill">Emergency</div>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <h2>How The Booking Flow Works</h2>
-      <p>Choose your district first, then your sector, then the cell or village, and then the health area nearest to you. After that, the form asks for your basic personal details and preferred visit time.</p>
-    </section>
-
-    <section class="content-section">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <details>
-          <summary>What if I do not know my health area?</summary>
-          <p>Enter the nearest area you know, or use the district and sector fields to guide the facility choice.</p>
-        </details>
-        <details>
-          <summary>Can this work for any city or district?</summary>
-          <p>Yes. The examples can be replaced with your local districts, sectors, and facilities.</p>
-        </details>
-        <details>
-          <summary>Do I need to choose a doctor?</summary>
-          <p>No. The booking flow is based on the facility and the care you need, not a doctor selector.</p>
-        </details>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <h2>Community Notices</h2>
-      <div class="notice-grid">
-        <div class="notice-card">
-          <h3>Vaccination day</h3>
-          <p>Community vaccination visits can be added for children and adults when available.</p>
-        </div>
-        <div class="notice-card">
-          <h3>Health outreach</h3>
-          <p>Local health workers can bring services closer to villages and neighborhoods.</p>
-        </div>
-        <div class="notice-card">
-          <h3>Blood donation</h3>
-          <p>Safe blood donation awareness can be shown here as part of community support.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-strip" id="contact">
-      <div>
-        <h2>Contact and Support</h2>
-        <p><strong>Emergency:</strong> local emergency line</p>
-        <p><strong>Email:</strong> support@mediconnect.example</p>
-      </div>
-      <div>
-        <p><strong>Working Hours:</strong> Monday to Saturday, 8:00 AM - 5:00 PM</p>
-        <p><strong>Service Area:</strong> any city, district, or region</p>
+        <a class="button button-light" href="appointment.html">Request routine care <img src="assets/icons/arrow.svg" alt="" class="button-icon"></a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>Mediconnect Community Health Access</p>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p><strong>MediConnect</strong> — simple access to community care.</p>
+      <p>Built as a front-end demo.</p>
+    </div>
   </footer>
 </body>
 </html>
